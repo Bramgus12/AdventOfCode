@@ -1,4 +1,23 @@
 {
-  "name": "AdventOfCode",
-  "packageManager": "yarn@4.5.3"
+  "name": "advent-of-code",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "author": "Bramgus12",
+  "license": "MIT",
+  "private": true,
+  "packageManager": "yarn@4.5.3",
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "eslint": "8",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "prettier": "^3.4.1",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "7"
+  },
+  "scripts": {
+    "start": "node --experimental-strip-types --experimental-transform-types index.ts",
+    "lint": "eslint ."
+  }
 }
