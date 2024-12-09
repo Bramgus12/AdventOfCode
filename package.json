@@ -4,9 +4,11 @@
   "main": "index.ts",
   "author": "Bramgus12",
   "license": "MIT",
+  "type": "module",
   "private": true,
   "packageManager": "yarn@4.5.3",
   "devDependencies": {
+    "@types/lodash.clonedeep": "^4",
     "@types/node": "^22.10.1",
     "eslint": "8",
     "eslint-config-prettier": "^9.1.0",
@@ -17,7 +19,10 @@
     "typescript-eslint": "7"
   },
   "scripts": {
-    "start": "node --experimental-strip-types --experimental-transform-types index.ts",
+    "start": "node --experimental-strip-types --experimental-transform-types --stack-size=90000 --max-old-space-size=8192 index.ts",
     "lint": "eslint ."
+  },
+  "dependencies": {
+    "lodash.clonedeep": "^4.5.0"
   }
 }
